@@ -1,34 +1,22 @@
-import { Carousel } from "@ark-ui/react";
+import { Checkbox } from "@ark-ui/react";
+import { CheckIcon, MinusIcon } from "lucide-react";
 
 function App() {
-  const images = [
-    "https://tinyurl.com/5b6ka8jd",
-    "https://tinyurl.com/7rmccdn5",
-    "https://tinyurl.com/59jxz9uu",
-  ];
   return (
-    <Carousel.Root>
-      <Carousel.Control>
-        <Carousel.PrevTrigger>Previous</Carousel.PrevTrigger>
-        <Carousel.NextTrigger>Next</Carousel.NextTrigger>
-      </Carousel.Control>
-      <Carousel.IndicatorGroup>
-        {images.map((_, index) => (
-          <Carousel.Indicator key={index} index={index}>
-            {index + 1}
-          </Carousel.Indicator>
-        ))}
-      </Carousel.IndicatorGroup>
-      <Carousel.Viewport>
-        <Carousel.ItemGroup>
-          {images.map((image, index) => (
-            <Carousel.Item key={index} index={index}>
-              <img src={image} alt={`Slide ${index}`} />
-            </Carousel.Item>
-          ))}
-        </Carousel.ItemGroup>
-      </Carousel.Viewport>
-    </Carousel.Root>
+    <div className="min-h-dvh grid place-items-center">
+      <Checkbox.Root>
+        <Checkbox.Control>
+          <Checkbox.Indicator>
+            <CheckIcon />
+          </Checkbox.Indicator>
+          <Checkbox.Indicator indeterminate>
+            <MinusIcon />
+          </Checkbox.Indicator>
+        </Checkbox.Control>
+        <Checkbox.Label>Checkbox</Checkbox.Label>
+        <Checkbox.HiddenInput />
+      </Checkbox.Root>
+    </div>
   );
 }
 

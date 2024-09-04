@@ -1,6 +1,6 @@
 @layer components {
   [data-scope="checkbox"][data-part="root"] {
-    @apply flex items-center gap-3;
+    @apply flex items-center gap-2;
   }
 
   [data-scope="checkbox"][data-part="root"][data-disabled] {
@@ -9,11 +9,11 @@
 
   [data-scope="checkbox"][data-part="root"][data-focus]
     > [data-scope="checkbox"][data-part="control"] {
-    @apply ring-2 ring-primary ring-offset-2;
+    @apply ring-1 ring-primary ring-offset-0;
   }
 
   [data-scope="checkbox"][data-part="control"] {
-    @apply border size-5 rounded-sm grid place-items-center;
+    @apply border size-4 rounded-sm grid place-items-center;
   }
 
   [data-scope="checkbox"][data-part="control"][data-hover] {
@@ -33,7 +33,7 @@
   }
 
   [data-scope="checkbox"][data-part="indicator"] {
-    @apply [&>svg]:size-4 text-current;
+    @apply [&>svg]:size-3 text-current;
   }
 
   [data-scope="checkbox"][data-part="label"] {

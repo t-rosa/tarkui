@@ -1,9 +1,9 @@
-import { DialogExample } from "./components/dialog/dialog";
+import { FieldExample } from "./components/field/field";
 
 function App() {
   return (
     <div className="min-h-dvh grid place-items-center">
-      <DialogExample />
+      <FieldExample />
     </div>
   );
 }

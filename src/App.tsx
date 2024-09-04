@@ -1,10 +1,9 @@
-import { AvatarExample } from "./components/avatar/avatar";
-import { CheckboxExample } from "./components/checkbox/checkbox";
+import { ComboboxExample } from "./components/combobox/combobox";
 
 function App() {
   return (
     <div className="min-h-dvh grid place-items-center">
-      <CheckboxExample />
+      <ComboboxExample />
     </div>
   );
 }

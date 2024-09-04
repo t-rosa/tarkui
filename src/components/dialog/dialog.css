@@ -16,7 +16,7 @@
   }
 
   [data-scope="dialog"][data-part="content"] {
-    @apply relative p-4 border bg-background max-w-lg w-full rounded-lg;
+    @apply relative p-6 border bg-background max-w-lg w-full rounded-lg;
   }
 
   [data-scope="dialog"][data-part="content"][data-state="open"] {
@@ -33,5 +33,17 @@
 
   [data-scope="dialog"][data-part="description"] {
     @apply text-muted-foreground text-sm;
+  }
+
+  [data-scope="dialog"][data-part="trigger"] {
+    @apply border hover:bg-muted px-3 py-2 rounded-md;
+  }
+
+  [data-scope="dialog"][data-part="close-trigger"] {
+    @apply text-muted-foreground absolute top-4 right-4 size-4;
+  }
+
+  [data-scope="dialog"][data-part="close-trigger"] > svg {
+    @apply size-4;
   }
 }

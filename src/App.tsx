@@ -1,13 +1,34 @@
-import { Avatar } from "@ark-ui/react";
+import { Carousel } from "@ark-ui/react";
 
 function App() {
+  const images = [
+    "https://tinyurl.com/5b6ka8jd",
+    "https://tinyurl.com/7rmccdn5",
+    "https://tinyurl.com/59jxz9uu",
+  ];
   return (
-    <>
-      <Avatar.Root>
-        <Avatar.Fallback>PA</Avatar.Fallback>
-        <Avatar.Image src="https://i.pravatar.cc/300" alt="avatar" />
-      </Avatar.Root>
-    </>
+    <Carousel.Root>
+      <Carousel.Control>
+        <Carousel.PrevTrigger>Previous</Carousel.PrevTrigger>
+        <Carousel.NextTrigger>Next</Carousel.NextTrigger>
+      </Carousel.Control>
+      <Carousel.IndicatorGroup>
+        {images.map((_, index) => (
+          <Carousel.Indicator key={index} index={index}>
+            {index + 1}
+          </Carousel.Indicator>
+        ))}
+      </Carousel.IndicatorGroup>
+      <Carousel.Viewport>
+        <Carousel.ItemGroup>
+          {images.map((image, index) => (
+            <Carousel.Item key={index} index={index}>
+              <img src={image} alt={`Slide ${index}`} />
+            </Carousel.Item>
+          ))}
+        </Carousel.ItemGroup>
+      </Carousel.Viewport>
+    </Carousel.Root>
   );
 }
 

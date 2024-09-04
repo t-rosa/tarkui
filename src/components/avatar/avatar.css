@@ -1,0 +1,13 @@
+@layer components {
+  [data-scope="avatar"][data-part="root"] {
+    @apply grid size-10 rounded-full overflow-hidden;
+  }
+
+  [data-scope="avatar"][data-part="fallback"] {
+    @apply col-span-full row-span-full grid place-items-center border rounded-full bg-muted;
+  }
+
+  [data-scope="avatar"][data-part="image"] {
+    @apply col-span-full row-span-full;
+  }
+}

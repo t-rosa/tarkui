@@ -70,8 +70,8 @@
   }
 }
 
+/* Accordion */
 @layer components {
-  /* Accordion */
   [data-scope="accordion"][data-part="item"] {
     @apply border-b grid;
   }
@@ -99,8 +99,10 @@
   [data-scope="accordion"][data-part="item-indicator"][data-state="open"] {
     @apply rotate-180 transition-all;
   }
+}
 
-  /* Avatar */
+/* Avatar */
+@layer components {
   [data-scope="avatar"][data-part="root"] {
     @apply grid size-10 rounded-full overflow-hidden;
   }
@@ -111,5 +113,26 @@
 
   [data-scope="avatar"][data-part="image"] {
     @apply col-span-full row-span-full;
+  }
+}
+
+/* Carousel */
+@layer components {
+  [data-scope="carousel"][data-part="root"] {
+  }
+
+  [data-scope="carousel"][data-part="prev-trigger"] {
+  }
+
+  [data-scope="carousel"][data-part="item"] {
+  }
+
+  [data-scope="carousel"][data-part="next-trigger"] {
+  }
+
+  [data-scope="carousel"][data-part="indicator-group"] {
+  }
+
+  [data-scope="carousel"][data-part="indicator"] {
   }
 }

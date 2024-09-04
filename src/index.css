@@ -2,6 +2,7 @@
 @import url("./components/avatar/avatar.css");
 @import url("./components/checkbox/checkbox.css");
 @import url("./components/combobox/combobox.css");
+@import url("./components/dialog/dialog.css");
 
 @tailwind base;
 @tailwind components;

@@ -16,6 +16,10 @@
     @apply border size-5 rounded-sm grid place-items-center;
   }
 
+  [data-scope="checkbox"][data-part="control"][data-hover] {
+    @apply cursor-pointer;
+  }
+
   [data-scope="checkbox"][data-part="control"][data-focus] {
     @apply ring-offset-2 ring-ring  ring-offset-background;
   }

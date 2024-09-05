@@ -1,12 +1,18 @@
-import { Avatar } from "./components/avatar/avatar";
+import { CheckIcon } from "lucide-react";
+import { Checkbox } from "./components/checkbox/checkbox";
 
 function App() {
   return (
     <div className="min-h-dvh grid place-items-center">
-      <Avatar.Root>
-        <Avatar.Fallback>PA</Avatar.Fallback>
-        <Avatar.Image src="https://i.pravatar.cc/300" alt="avatar" />
-      </Avatar.Root>
+      <Checkbox.Root>
+        <Checkbox.Label>Checkbox</Checkbox.Label>
+        <Checkbox.Control>
+          <Checkbox.Indicator>
+            <CheckIcon />
+          </Checkbox.Indicator>
+        </Checkbox.Control>
+        <Checkbox.HiddenInput />
+      </Checkbox.Root>
     </div>
   );
 }

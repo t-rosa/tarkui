@@ -13,18 +13,22 @@ export function Combobox(
   return <ComboboxRootProvider {...props} />;
 }
 
-const Root = React.forwardRef<
-  HTMLDivElement,
-  ArkCombobox.RootProps<ComboboxCollectionItem>
->(({ ...props }, ref) => (
+const RootInner = <T extends ComboboxCollectionItem>(
+  props: ArkCombobox.RootProps<T>,
+  ref: React.ForwardedRef<HTMLDivElement>
+) => (
   <ArkCombobox.Root
     ref={ref}
     className={clsx(["", props.className])}
     {...props}
   />
-));
+);
 
-Root.displayName = "Root";
+const Root = React.forwardRef(RootInner) as <T extends ComboboxCollectionItem>(
+  props: ArkCombobox.RootProps<T> & {
+    ref?: React.ForwardedRef<HTMLUListElement>;
+  }
+) => ReturnType<typeof RootInner>;
 
 const ClearTrigger = React.forwardRef<
   HTMLButtonElement,

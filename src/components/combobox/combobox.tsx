@@ -26,7 +26,7 @@ const RootInner = <T extends ComboboxCollectionItem>(
 
 const Root = React.forwardRef(RootInner) as <T extends ComboboxCollectionItem>(
   props: ArkCombobox.RootProps<T> & {
-    ref?: React.ForwardedRef<HTMLUListElement>;
+    ref?: React.ForwardedRef<HTMLDivElement>;
   }
 ) => ReturnType<typeof RootInner>;
 

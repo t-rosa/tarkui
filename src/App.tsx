@@ -1,9 +1,9 @@
-import { CheckboxExample } from "./components/checkbox/checkbox-example";
+import { ComboboxExample } from "./components/combobox/combobox-example";
 
 function App() {
   return (
     <div className="min-h-dvh grid place-items-center">
-      <CheckboxExample />
+      <ComboboxExample />
     </div>
   );
 }

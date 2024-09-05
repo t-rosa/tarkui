@@ -1,9 +1,13 @@
 import * as React from "react";
-import { Accordion as ArkAccordion } from "@ark-ui/react";
+import {
+  AccordionRootProvider,
+  AccordionRootProviderProps,
+  Accordion as ArkAccordion,
+} from "@ark-ui/react";
 import clsx from "clsx";
 
-export function Accordion(props: React.PropsWithChildren) {
-  return props.children;
+export function Accordion(props: AccordionRootProviderProps) {
+  return <AccordionRootProvider {...props} />;
 }
 
 const Root = React.forwardRef<HTMLDivElement, ArkAccordion.RootProps>(

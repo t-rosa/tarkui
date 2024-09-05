@@ -1,9 +1,13 @@
 import * as React from "react";
-import { Avatar as ArkAvatar } from "@ark-ui/react";
+import {
+  Avatar as ArkAvatar,
+  AvatarRootProvider,
+  AvatarRootProviderProps,
+} from "@ark-ui/react";
 import clsx from "clsx";
 
-export function Avatar(props: React.PropsWithChildren) {
-  return props.children;
+export function Avatar(props: AvatarRootProviderProps) {
+  return <AvatarRootProvider {...props} />;
 }
 
 const Root = React.forwardRef<HTMLDivElement, ArkAvatar.RootProps>(

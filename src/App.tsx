@@ -1,9 +1,9 @@
-import { DialogExample } from "./components/dialog/dialog-example";
+import { CarouselExample } from "./components/carousel/carousel-example";
 
 function App() {
   return (
     <div className="min-h-dvh grid place-items-center">
-      <DialogExample />
+      <CarouselExample />
     </div>
   );
 }

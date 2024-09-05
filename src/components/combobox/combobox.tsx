@@ -17,11 +17,7 @@ const RootInner = <T extends ComboboxCollectionItem>(
   props: ArkCombobox.RootProps<T>,
   ref: React.ForwardedRef<HTMLDivElement>
 ) => (
-  <ArkCombobox.Root
-    ref={ref}
-    className={clsx(["", props.className])}
-    {...props}
-  />
+  <ArkCombobox.Root ref={ref} className={clsx([props.className])} {...props} />
 );
 
 const Root = React.forwardRef(RootInner) as <T extends ComboboxCollectionItem>(
@@ -142,7 +138,7 @@ const ItemText = React.forwardRef<HTMLDivElement, ArkCombobox.ItemTextProps>(
   (props, ref) => (
     <ArkCombobox.ItemText
       ref={ref}
-      className={clsx(["", props.className])}
+      className={clsx([props.className])}
       {...props}
     />
   )
@@ -166,7 +162,7 @@ const List = React.forwardRef<HTMLDivElement, ArkCombobox.ListProps>(
   (props, ref) => (
     <ArkCombobox.List
       ref={ref}
-      className={clsx(["", props.className])}
+      className={clsx([props.className])}
       {...props}
     />
   )
@@ -196,7 +192,7 @@ const Positioner = React.forwardRef<
 >((props, ref) => (
   <ArkCombobox.Positioner
     ref={ref}
-    className={clsx(["", props.className])}
+    className={clsx([props.className])}
     {...props}
   />
 ));

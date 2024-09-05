@@ -1,24 +1,12 @@
-import { ChevronDownIcon } from "lucide-react";
-import { Accordion } from "./components/accordion/accordion";
+import { Avatar } from "./components/avatar/avatar";
 
 function App() {
   return (
     <div className="min-h-dvh grid place-items-center">
-      <Accordion.Root defaultValue={["React"]}>
-        {["React", "Solid", "Vue"].map((item) => (
-          <Accordion.Item key={item} value={item}>
-            <Accordion.ItemTrigger>
-              What is {item}?
-              <Accordion.ItemIndicator>
-                <ChevronDownIcon />
-              </Accordion.ItemIndicator>
-            </Accordion.ItemTrigger>
-            <Accordion.ItemContent>
-              {item} is a JavaScript library for building user interfaces.
-            </Accordion.ItemContent>
-          </Accordion.Item>
-        ))}
-      </Accordion.Root>
+      <Avatar.Root>
+        <Avatar.Fallback>PA</Avatar.Fallback>
+        <Avatar.Image src="https://i.pravatar.cc/300" alt="avatar" />
+      </Avatar.Root>
     </div>
   );
 }

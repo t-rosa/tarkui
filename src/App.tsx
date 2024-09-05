@@ -1,9 +1,9 @@
-import { ComboboxExample } from "./components/combobox/combobox-example";
+import { DialogExample } from "./components/dialog/dialog-example";
 
 function App() {
   return (
     <div className="min-h-dvh grid place-items-center">
-      <ComboboxExample />
+      <DialogExample />
     </div>
   );
 }

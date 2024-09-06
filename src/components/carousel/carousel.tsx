@@ -14,7 +14,7 @@ const Root = React.forwardRef<HTMLDivElement, ArkCarousel.RootProps>(
   (props, ref) => (
     <ArkCarousel.Root
       ref={ref}
-      className={clsx(["", props.className])}
+      className={clsx([props.className])}
       {...props}
     />
   )
@@ -26,7 +26,7 @@ const Control = React.forwardRef<HTMLDivElement, ArkCarousel.ControlProps>(
   (props, ref) => (
     <ArkCarousel.Control
       ref={ref}
-      className={clsx(["", props.className])}
+      className={clsx([props.className])}
       {...props}
     />
   )
@@ -40,7 +40,7 @@ const IndicatorGroup = React.forwardRef<
 >((props, ref) => (
   <ArkCarousel.IndicatorGroup
     ref={ref}
-    className={clsx(["", props.className])}
+    className={clsx([props.className])}
     {...props}
   />
 ));
@@ -53,7 +53,7 @@ const Indicator = React.forwardRef<
 >((props, ref) => (
   <ArkCarousel.Indicator
     ref={ref}
-    className={clsx(["", props.className])}
+    className={clsx([props.className])}
     {...props}
   />
 ));
@@ -64,7 +64,7 @@ const ItemGroup = React.forwardRef<HTMLDivElement, ArkCarousel.ItemGroupProps>(
   (props, ref) => (
     <ArkCarousel.ItemGroup
       ref={ref}
-      className={clsx(["", props.className])}
+      className={clsx([props.className])}
       {...props}
     />
   )
@@ -76,7 +76,7 @@ const Item = React.forwardRef<HTMLDivElement, ArkCarousel.ItemProps>(
   (props, ref) => (
     <ArkCarousel.Item
       ref={ref}
-      className={clsx(["", props.className])}
+      className={clsx([props.className])}
       {...props}
     />
   )
@@ -90,7 +90,11 @@ const NextTrigger = React.forwardRef<
 >((props, ref) => (
   <ArkCarousel.NextTrigger
     ref={ref}
-    className={clsx(["", props.className])}
+    className={clsx([
+      "border rounded-full p-2 disabled:cursor-not-allowed disabled:text-muted",
+      "[&>svg]:size-5",
+      props.className,
+    ])}
     {...props}
   />
 ));
@@ -103,7 +107,11 @@ const PrevTrigger = React.forwardRef<
 >((props, ref) => (
   <ArkCarousel.PrevTrigger
     ref={ref}
-    className={clsx(["", props.className])}
+    className={clsx([
+      "border rounded-full p-2 disabled:cursor-not-allowed disabled:text-muted",
+      "[&>svg]:size-5",
+      props.className,
+    ])}
     {...props}
   />
 ));
@@ -114,7 +122,10 @@ const Viewport = React.forwardRef<HTMLDivElement, ArkCarousel.ViewportProps>(
   (props, ref) => (
     <ArkCarousel.Viewport
       ref={ref}
-      className={clsx(["", props.className])}
+      className={clsx([
+        "overflow-x-hidden relative rounded-md",
+        props.className,
+      ])}
       {...props}
     />
   )

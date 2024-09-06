@@ -2,7 +2,7 @@ import { CarouselExample } from "./components/carousel/carousel-example";
 
 function App() {
   return (
-    <div className="min-h-dvh grid place-items-center">
+    <div className="p-12 max-w-xl">
       <CarouselExample />
     </div>
   );

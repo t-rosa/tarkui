@@ -1,9 +1,9 @@
-import { ColorPickerExample } from "./components/color-picker/color-picker-example";
+import { Button } from "./components/button/button";
 
 function App() {
   return (
     <div className="p-12 max-w-xl">
-      <ColorPickerExample />
+      <Button>test</Button>
     </div>
   );
 }

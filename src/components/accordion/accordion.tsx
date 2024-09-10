@@ -12,11 +12,7 @@ export function Accordion(props: AccordionRootProviderProps) {
 
 const Root = React.forwardRef<HTMLDivElement, ArkAccordion.RootProps>(
   (props, ref) => (
-    <ArkAccordion.Root
-      ref={ref}
-      className={clsx([props.className])}
-      {...props}
-    />
+    <ArkAccordion.Root ref={ref} className={clsx(props.className)} {...props} />
   )
 );
 
@@ -26,7 +22,7 @@ const Item = React.forwardRef<HTMLDivElement, ArkAccordion.ItemProps>(
   (props, ref) => (
     <ArkAccordion.Item
       ref={ref}
-      className={clsx(["border-b grid", props.className])}
+      className={clsx("border-b grid", props.className)}
       {...props}
     />
   )
@@ -40,12 +36,12 @@ const ItemContent = React.forwardRef<
 >((props, ref) => (
   <ArkAccordion.ItemContent
     ref={ref}
-    className={clsx([
+    className={clsx(
       "overflow-hidden text-sm",
       "data-[state=open]:animate-accordion-down",
       "data-[state=closed]:animate-accordion-up",
-      props.className,
-    ])}
+      props.className
+    )}
     {...props}
   />
 ));
@@ -58,10 +54,10 @@ const ItemTrigger = React.forwardRef<
 >((props, ref) => (
   <ArkAccordion.ItemTrigger
     ref={ref}
-    className={clsx([
+    className={clsx(
       "flex items-center hover:underline justify-between py-4 text-sm font-medium",
-      props.className,
-    ])}
+      props.className
+    )}
     {...props}
   />
 ));
@@ -74,12 +70,12 @@ const ItemIndicator = React.forwardRef<
 >((props, ref) => (
   <ArkAccordion.ItemIndicator
     ref={ref}
-    className={clsx([
+    className={clsx(
       "duration-200 text-muted-foreground",
       "data-[state=open]:rotate-180",
       "[&>svg]:size-4",
-      props.className,
-    ])}
+      props.className
+    )}
     {...props}
   />
 ));

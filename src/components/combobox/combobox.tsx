@@ -17,7 +17,7 @@ const RootInner = <T extends ComboboxCollectionItem>(
   props: ArkCombobox.RootProps<T>,
   ref: React.ForwardedRef<HTMLDivElement>
 ) => (
-  <ArkCombobox.Root ref={ref} className={clsx([props.className])} {...props} />
+  <ArkCombobox.Root ref={ref} className={clsx(props.className)} {...props} />
 );
 
 const Root = React.forwardRef(RootInner) as <T extends ComboboxCollectionItem>(
@@ -32,12 +32,12 @@ const ClearTrigger = React.forwardRef<
 >((props, ref) => (
   <ArkCombobox.ClearTrigger
     ref={ref}
-    className={clsx([
+    className={clsx(
       "text-muted-foreground border rounded-md px-3 py-1.5",
       "hover:bg-muted",
       "[&>svg]:size-4",
-      props.className,
-    ])}
+      props.className
+    )}
     {...props}
   />
 ));
@@ -48,7 +48,7 @@ const Content = React.forwardRef<HTMLDivElement, ArkCombobox.ContentProps>(
   (props, ref) => (
     <ArkCombobox.Content
       ref={ref}
-      className={clsx(["text-sm border rounded-md p-1", props.className])}
+      className={clsx("text-sm border rounded-md p-1", props.className)}
       {...props}
     />
   )
@@ -60,7 +60,7 @@ const Control = React.forwardRef<HTMLDivElement, ArkCombobox.ControlProps>(
   (props, ref) => (
     <ArkCombobox.Control
       ref={ref}
-      className={clsx(["flex items-center gap-1", props.className])}
+      className={clsx("flex items-center gap-1", props.className)}
       {...props}
     />
   )
@@ -72,7 +72,7 @@ const Input = React.forwardRef<HTMLInputElement, ArkCombobox.InputProps>(
   (props, ref) => (
     <ArkCombobox.Input
       ref={ref}
-      className={clsx(["px-3 py-1.5 border rounded-md", props.className])}
+      className={clsx("px-3 py-1.5 border rounded-md", props.className)}
       {...props}
     />
   )
@@ -86,7 +86,7 @@ const ItemGroupLabel = React.forwardRef<
 >((props, ref) => (
   <ArkCombobox.ItemGroupLabel
     ref={ref}
-    className={clsx(["border-b p-3 mb-1 font-medium", props.className])}
+    className={clsx("border-b p-3 mb-1 font-medium", props.className)}
     {...props}
   />
 ));
@@ -97,7 +97,7 @@ const ItemGroup = React.forwardRef<HTMLDivElement, ArkCombobox.ItemGroupProps>(
   (props, ref) => (
     <ArkCombobox.ItemGroup
       ref={ref}
-      className={clsx(["", props.className])}
+      className={clsx(props.className)}
       {...props}
     />
   )
@@ -111,7 +111,7 @@ const ItemIndicator = React.forwardRef<
 >((props, ref) => (
   <ArkCombobox.ItemIndicator
     ref={ref}
-    className={clsx(["[&>svg]:size-4", props.className])}
+    className={clsx("[&>svg]:size-4", props.className)}
     {...props}
   />
 ));
@@ -122,11 +122,11 @@ const Item = React.forwardRef<HTMLDivElement, ArkCombobox.ItemProps>(
   (props, ref) => (
     <ArkCombobox.Item
       ref={ref}
-      className={clsx([
+      className={clsx(
         "flex justify-between items-center rounded-md p-2",
         "hover:bg-muted",
-        props.className,
-      ])}
+        props.className
+      )}
       {...props}
     />
   )
@@ -138,7 +138,7 @@ const ItemText = React.forwardRef<HTMLDivElement, ArkCombobox.ItemTextProps>(
   (props, ref) => (
     <ArkCombobox.ItemText
       ref={ref}
-      className={clsx([props.className])}
+      className={clsx(props.className)}
       {...props}
     />
   )
@@ -150,7 +150,7 @@ const Label = React.forwardRef<HTMLLabelElement, ArkCombobox.LabelProps>(
   (props, ref) => (
     <ArkCombobox.Label
       ref={ref}
-      className={clsx(["font-medium text-sm", props.className])}
+      className={clsx("font-medium text-sm", props.className)}
       {...props}
     />
   )
@@ -160,11 +160,7 @@ Label.displayName = "Label";
 
 const List = React.forwardRef<HTMLDivElement, ArkCombobox.ListProps>(
   (props, ref) => (
-    <ArkCombobox.List
-      ref={ref}
-      className={clsx([props.className])}
-      {...props}
-    />
+    <ArkCombobox.List ref={ref} className={clsx(props.className)} {...props} />
   )
 );
 
@@ -174,11 +170,11 @@ const Trigger = React.forwardRef<HTMLButtonElement, ArkCombobox.TriggerProps>(
   (props, ref) => (
     <ArkCombobox.Trigger
       ref={ref}
-      className={clsx([
+      className={clsx(
         "text-muted-foreground px-3 py-1.5 -ml-11",
         "[&>svg]:size-4",
-        props.className,
-      ])}
+        props.className
+      )}
       {...props}
     />
   )
@@ -192,7 +188,7 @@ const Positioner = React.forwardRef<
 >((props, ref) => (
   <ArkCombobox.Positioner
     ref={ref}
-    className={clsx([props.className])}
+    className={clsx(props.className)}
     {...props}
   />
 ));

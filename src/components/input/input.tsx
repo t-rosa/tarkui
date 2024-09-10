@@ -8,7 +8,7 @@ const Input = React.forwardRef<
   return (
     <input
       type={props.type}
-      className={clsx([
+      className={clsx(
         "flex w-full rounded-md border border-input bg-background px-3 py-1.5 text-sm ring-offset-background",
         "placeholder:text-muted-foreground",
         "focus-visible:ring-2",
@@ -17,8 +17,8 @@ const Input = React.forwardRef<
         "focus-visible:ring-offset-2",
         "disabled:cursor-not-allowed ",
         "disabled:opacity-50",
-        props.className,
-      ])}
+        props.className
+      )}
       ref={ref}
       {...props}
     />

@@ -33,12 +33,12 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (props, ref) => {
     return (
       <button
-        className={clsx([
+        className={clsx(
           buttonVariants({
             variant: props.variant,
             className: props.className,
-          }),
-        ])}
+          })
+        )}
         ref={ref}
         {...props}
       />

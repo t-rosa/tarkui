@@ -8,7 +8,6 @@ export function ColorPickerExample() {
       <ColorPicker.Control className="flex gap-3">
         <ColorPicker.ChannelInput channel="hex" />
         <ColorPicker.Trigger>
-          <ColorPicker.TransparencyGrid />
           <ColorPicker.ValueSwatch />
         </ColorPicker.Trigger>
       </ColorPicker.Control>

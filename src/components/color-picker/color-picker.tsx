@@ -14,7 +14,7 @@ const Root = React.forwardRef<HTMLDivElement, ArkColorPicker.RootProps>(
   (props, ref) => (
     <ArkColorPicker.Root
       ref={ref}
-      className={clsx(["", props.className])}
+      className={clsx(props.className)}
       {...props}
     />
   )
@@ -28,10 +28,7 @@ const Trigger = React.forwardRef<
 >((props, ref) => (
   <ArkColorPicker.Trigger
     ref={ref}
-    className={clsx([
-      "grid overflow-hidden place-items-center size-8 border rounded-md",
-      props.className,
-    ])}
+    className={clsx(props.className)}
     {...props}
   />
 ));
@@ -44,10 +41,17 @@ const ChannelInput = React.forwardRef<
 >((props, ref) => (
   <ArkColorPicker.ChannelInput
     ref={ref}
-    className={clsx([
-      "border px-3 py-1.5 rounded-md max-w-24",
-      props.className,
-    ])}
+    className={clsx(
+      "flex w-full rounded-md border border-input bg-background px-3 py-1.5 text-sm ring-offset-background",
+      "placeholder:text-muted-foreground",
+      "focus-visible:ring-2",
+      "focus-visible:ring-ring",
+      "focus-visible:outline-none",
+      "focus-visible:ring-offset-2",
+      "disabled:cursor-not-allowed ",
+      "disabled:opacity-50",
+      props.className
+    )}
     {...props}
   />
 ));
@@ -60,7 +64,7 @@ const AreaBackground = React.forwardRef<
 >((props, ref) => (
   <ArkColorPicker.AreaBackground
     ref={ref}
-    className={clsx(["size-full", props.className])}
+    className={clsx("size-full", props.className)}
     {...props}
   />
 ));
@@ -71,10 +75,10 @@ const Area = React.forwardRef<HTMLDivElement, ArkColorPicker.AreaProps>(
   (props, ref) => (
     <ArkColorPicker.Area
       ref={ref}
-      className={clsx([
+      className={clsx(
         "w-full h-44 rounded-md overflow-hidden border",
-        props.className,
-      ])}
+        props.className
+      )}
       {...props}
     />
   )
@@ -88,10 +92,10 @@ const AreaThumb = React.forwardRef<
 >((props, ref) => (
   <ArkColorPicker.AreaThumb
     ref={ref}
-    className={clsx([
+    className={clsx(
       "size-3 rounded-full border-2 border-background",
-      props.className,
-    ])}
+      props.className
+    )}
     {...props}
   />
 ));
@@ -104,7 +108,7 @@ const ChannelSliderLabel = React.forwardRef<
 >((props, ref) => (
   <ArkColorPicker.ChannelSliderLabel
     ref={ref}
-    className={clsx(["", props.className])}
+    className={clsx(props.className)}
     {...props}
   />
 ));
@@ -117,7 +121,7 @@ const ChannelSlider = React.forwardRef<
 >((props, ref) => (
   <ArkColorPicker.ChannelSlider
     ref={ref}
-    className={clsx(["min-h-4 border rounded-md", props.className])}
+    className={clsx("min-h-4 border rounded-md", props.className)}
     {...props}
   />
 ));
@@ -130,10 +134,10 @@ const ChannelSliderThumb = React.forwardRef<
 >((props, ref) => (
   <ArkColorPicker.ChannelSliderThumb
     ref={ref}
-    className={clsx([
+    className={clsx(
       "rounded-full size-6 -translate-x-1/2 -translate-y-1/2 border-2 border-background outline-none",
-      props.className,
-    ])}
+      props.className
+    )}
     {...props}
   />
 ));
@@ -146,7 +150,7 @@ const ChannelSliderTrack = React.forwardRef<
 >((props, ref) => (
   <ArkColorPicker.ChannelSliderTrack
     ref={ref}
-    className={clsx(["size-full rounded-md", props.className])}
+    className={clsx("size-full rounded-md", props.className)}
     {...props}
   />
 ));
@@ -159,7 +163,7 @@ const ChannelSliderValueText = React.forwardRef<
 >((props, ref) => (
   <ArkColorPicker.ChannelSliderValueText
     ref={ref}
-    className={clsx(["", props.className])}
+    className={clsx(props.className)}
     {...props}
   />
 ));
@@ -170,10 +174,10 @@ const Content = React.forwardRef<HTMLDivElement, ArkColorPicker.ContentProps>(
   (props, ref) => (
     <ArkColorPicker.Content
       ref={ref}
-      className={clsx([
+      className={clsx(
         "border rounded-md p-4 bg-background space-y-3",
-        props.className,
-      ])}
+        props.className
+      )}
       {...props}
     />
   )
@@ -185,7 +189,7 @@ const Control = React.forwardRef<HTMLDivElement, ArkColorPicker.ControlProps>(
   (props, ref) => (
     <ArkColorPicker.Control
       ref={ref}
-      className={clsx(["", props.className])}
+      className={clsx(props.className)}
       {...props}
     />
   )
@@ -199,11 +203,7 @@ const EyeDropperTrigger = React.forwardRef<
 >((props, ref) => (
   <ArkColorPicker.EyeDropperTrigger
     ref={ref}
-    className={clsx([
-      "border p-2 rounded-md",
-      "hover:bg-muted",
-      props.className,
-    ])}
+    className={clsx("border p-2 rounded-md", "hover:bg-muted", props.className)}
     {...props}
   />
 ));
@@ -216,10 +216,10 @@ const FormatSelect = React.forwardRef<
 >((props, ref) => (
   <ArkColorPicker.FormatSelect
     ref={ref}
-    className={clsx([
+    className={clsx(
       "w-full border py-1.5 px-3 rounded-md cursor-pointer outline-none",
-      props.className,
-    ])}
+      props.className
+    )}
     {...props}
   />
 ));
@@ -232,7 +232,7 @@ const FormatTrigger = React.forwardRef<
 >((props, ref) => (
   <ArkColorPicker.FormatTrigger
     ref={ref}
-    className={clsx(["", props.className])}
+    className={clsx(props.className)}
     {...props}
   />
 ));
@@ -243,7 +243,7 @@ const Label = React.forwardRef<HTMLLabelElement, ArkColorPicker.LabelProps>(
   (props, ref) => (
     <ArkColorPicker.Label
       ref={ref}
-      className={clsx(["font-medium text-sm", props.className])}
+      className={clsx("font-medium text-sm", props.className)}
       {...props}
     />
   )
@@ -257,7 +257,7 @@ const Positioner = React.forwardRef<
 >((props, ref) => (
   <ArkColorPicker.Positioner
     ref={ref}
-    className={clsx(["", props.className])}
+    className={clsx(props.className)}
     {...props}
   />
 ));
@@ -270,7 +270,7 @@ const SwatchGroup = React.forwardRef<
 >((props, ref) => (
   <ArkColorPicker.SwatchGroup
     ref={ref}
-    className={clsx(["", props.className])}
+    className={clsx(props.className)}
     {...props}
   />
 ));
@@ -283,7 +283,7 @@ const SwatchIndicator = React.forwardRef<
 >((props, ref) => (
   <ArkColorPicker.SwatchIndicator
     ref={ref}
-    className={clsx(["", props.className])}
+    className={clsx(props.className)}
     {...props}
   />
 ));
@@ -294,7 +294,7 @@ const Swatch = React.forwardRef<HTMLDivElement, ArkColorPicker.SwatchProps>(
   (props, ref) => (
     <ArkColorPicker.Swatch
       ref={ref}
-      className={clsx(["size-full rounded-md", props.className])}
+      className={clsx("size-full rounded-md", props.className)}
       {...props}
     />
   )
@@ -308,7 +308,7 @@ const SwatchTrigger = React.forwardRef<
 >((props, ref) => (
   <ArkColorPicker.SwatchTrigger
     ref={ref}
-    className={clsx(["size-7 border rounded-md", props.className])}
+    className={clsx("size-7 border rounded-md", props.className)}
     {...props}
   />
 ));
@@ -321,7 +321,7 @@ const TransparencyGrid = React.forwardRef<
 >((props, ref) => (
   <ArkColorPicker.TransparencyGrid
     ref={ref}
-    className={clsx(["", props.className])}
+    className={clsx(props.className)}
     {...props}
   />
 ));
@@ -334,7 +334,7 @@ const ValueSwatch = React.forwardRef<
 >((props, ref) => (
   <ArkColorPicker.ValueSwatch
     ref={ref}
-    className={clsx(["size-6 rounded-md", props.className])}
+    className={clsx("size-8 border rounded-md", props.className)}
     {...props}
   />
 ));
@@ -345,7 +345,7 @@ const View = React.forwardRef<HTMLDivElement, ArkColorPicker.ViewProps>(
   (props, ref) => (
     <ArkColorPicker.View
       ref={ref}
-      className={clsx(["", props.className])}
+      className={clsx(props.className)}
       {...props}
     />
   )
@@ -359,7 +359,7 @@ const ValueText = React.forwardRef<
 >((props, ref) => (
   <ArkColorPicker.ValueText
     ref={ref}
-    className={clsx(["", props.className])}
+    className={clsx(props.className)}
     {...props}
   />
 ));
@@ -372,7 +372,7 @@ const HiddenInput = React.forwardRef<
 >((props, ref) => (
   <ArkColorPicker.HiddenInput
     ref={ref}
-    className={clsx(["", props.className])}
+    className={clsx(props.className)}
     {...props}
   />
 ));

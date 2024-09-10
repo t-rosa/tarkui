@@ -14,12 +14,12 @@ const Root = React.forwardRef<HTMLLabelElement, ArkCheckbox.RootProps>(
   (props, ref) => (
     <ArkCheckbox.Root
       ref={ref}
-      className={clsx([
+      className={clsx(
         "group flex items-center gap-2 ",
         "disabled:opacity-50 ",
         "disabled:cursor-not-allowed",
-        props.className,
-      ])}
+        props.className
+      )}
       {...props}
     />
   )
@@ -31,7 +31,7 @@ const Control = React.forwardRef<HTMLDivElement, ArkCheckbox.ControlProps>(
   (props, ref) => (
     <ArkCheckbox.Control
       ref={ref}
-      className={clsx([
+      className={clsx(
         "border size-4 rounded grid place-items-center",
         "hover:cursor-pointer",
         "group-data-[focus]:ring-1",
@@ -42,8 +42,8 @@ const Control = React.forwardRef<HTMLDivElement, ArkCheckbox.ControlProps>(
         "data-[state=checked]:bg-primary",
         "data-[state=indeterminate]:text-primary-foreground",
         "data-[state=indeterminate]:bg-primary",
-        props.className,
-      ])}
+        props.className
+      )}
       {...props}
     />
   )
@@ -53,11 +53,7 @@ Control.displayName = "Control";
 
 const Group = React.forwardRef<HTMLDivElement, ArkCheckbox.GroupProps>(
   (props, ref) => (
-    <ArkCheckbox.Group
-      ref={ref}
-      className={clsx([props.className])}
-      {...props}
-    />
+    <ArkCheckbox.Group ref={ref} className={clsx(props.className)} {...props} />
   )
 );
 
@@ -67,7 +63,7 @@ const Indicator = React.forwardRef<HTMLDivElement, ArkCheckbox.IndicatorProps>(
   (props, ref) => (
     <ArkCheckbox.Indicator
       ref={ref}
-      className={clsx(["text-current", "[&>svg]:size-3", props.className])}
+      className={clsx("text-current", "[&>svg]:size-3", props.className)}
       {...props}
     />
   )
@@ -79,7 +75,7 @@ const Label = React.forwardRef<HTMLSpanElement, ArkCheckbox.LabelProps>(
   (props, ref) => (
     <ArkCheckbox.Label
       ref={ref}
-      className={clsx(["text-sm font-semibold", props.className])}
+      className={clsx("text-sm font-semibold", props.className)}
       {...props}
     />
   )

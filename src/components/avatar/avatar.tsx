@@ -14,10 +14,7 @@ const Root = React.forwardRef<HTMLDivElement, ArkAvatar.RootProps>(
   (props, ref) => (
     <ArkAvatar.Root
       ref={ref}
-      className={clsx([
-        "size-10 rounded-full overflow-hidden",
-        props.className,
-      ])}
+      className={clsx("size-10 rounded-full overflow-hidden", props.className)}
       {...props}
     />
   )
@@ -29,11 +26,11 @@ const Fallback = React.forwardRef<HTMLSpanElement, ArkAvatar.FallbackProps>(
   (props, ref) => (
     <ArkAvatar.Fallback
       ref={ref}
-      className={clsx([
+      className={clsx(
         "grid place-items-center size-full bg-muted border rounded-full",
         "data-[state=hidden]:hidden",
-        props.className,
-      ])}
+        props.className
+      )}
       {...props}
     />
   )
@@ -45,7 +42,7 @@ const Image = React.forwardRef<HTMLImageElement, ArkAvatar.ImageProps>(
   (props, ref) => (
     <ArkAvatar.Image
       ref={ref}
-      className={clsx(["rounded-full", props.className])}
+      className={clsx("rounded-full", props.className)}
       {...props}
     />
   )

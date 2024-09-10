@@ -16,14 +16,14 @@ const Backdrop = React.forwardRef<HTMLDivElement, ArkDialog.BackdropProps>(
   (props, ref) => (
     <ArkDialog.Backdrop
       ref={ref}
-      className={clsx([
+      className={clsx(
         "fixed inset-0 z-50 backdrop-blur-sm bg-black/80",
         "data-[state=open]:animate-in ",
         "data-[state=open]:fade-in-0",
         "data-[state=close]:animate-out ",
         "data-[state=close]:fade-out-0",
-        props.className,
-      ])}
+        props.className
+      )}
       {...props}
     />
   )
@@ -37,11 +37,11 @@ const CloseTrigger = React.forwardRef<
 >((props, ref) => (
   <ArkDialog.CloseTrigger
     ref={ref}
-    className={clsx([
+    className={clsx(
       "text-muted-foreground absolute top-4 right-4 size-4",
       "[&>svg]:size-4",
-      props.className,
-    ])}
+      props.className
+    )}
     {...props}
   />
 ));
@@ -52,7 +52,7 @@ const Content = React.forwardRef<HTMLDivElement, ArkDialog.ContentProps>(
   (props, ref) => (
     <ArkDialog.Content
       ref={ref}
-      className={clsx([
+      className={clsx(
         "relative p-6 border bg-background max-w-lg w-full rounded-md",
         "data-[state=open]:animate-in",
         "data-[state=open]:fade-in-0",
@@ -60,8 +60,8 @@ const Content = React.forwardRef<HTMLDivElement, ArkDialog.ContentProps>(
         "data-[state=closed]:animate-out",
         "data-[state=closed]:fade-out-0",
         "data-[state=closed]:zoom-out-95",
-        props.className,
-      ])}
+        props.className
+      )}
       {...props}
     />
   )
@@ -75,7 +75,7 @@ const Description = React.forwardRef<
 >((props, ref) => (
   <ArkDialog.Description
     ref={ref}
-    className={clsx(["text-muted-foreground text-sm", props.className])}
+    className={clsx("text-muted-foreground text-sm", props.className)}
     {...props}
   />
 ));
@@ -88,10 +88,10 @@ const Positioner = React.forwardRef<
 >((props, ref) => (
   <ArkDialog.Positioner
     ref={ref}
-    className={clsx([
+    className={clsx(
       "flex items-center justify-center fixed inset-1 overflow-auto z-50",
-      props.className,
-    ])}
+      props.className
+    )}
     {...props}
   />
 ));
@@ -102,7 +102,7 @@ const Title = React.forwardRef<HTMLInputElement, ArkDialog.TitleProps>(
   (props, ref) => (
     <ArkDialog.Title
       ref={ref}
-      className={clsx(["font-semibold text-lg", props.className])}
+      className={clsx("font-semibold text-lg", props.className)}
       {...props}
     />
   )

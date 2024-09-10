@@ -29,7 +29,7 @@ const Trigger = React.forwardRef<
   <ArkColorPicker.Trigger
     ref={ref}
     className={clsx([
-      "grid overflow-hidden place-items-center size-8 border rounded-sm",
+      "grid overflow-hidden place-items-center size-8 border rounded-md",
       props.className,
     ])}
     {...props}
@@ -44,7 +44,10 @@ const ChannelInput = React.forwardRef<
 >((props, ref) => (
   <ArkColorPicker.ChannelInput
     ref={ref}
-    className={clsx(["border px-3 rounded-md max-w-24", props.className])}
+    className={clsx([
+      "border px-3 py-1.5 rounded-md max-w-24",
+      props.className,
+    ])}
     {...props}
   />
 ));
@@ -168,7 +171,7 @@ const Content = React.forwardRef<HTMLDivElement, ArkColorPicker.ContentProps>(
     <ArkColorPicker.Content
       ref={ref}
       className={clsx([
-        "border rounded-sm p-4 bg-background space-y-3",
+        "border rounded-md p-4 bg-background space-y-3",
         props.className,
       ])}
       {...props}
@@ -214,7 +217,7 @@ const FormatSelect = React.forwardRef<
   <ArkColorPicker.FormatSelect
     ref={ref}
     className={clsx([
-      "w-full border py-2 px-1 rounded-md cursor-pointer outline-none",
+      "w-full border py-1.5 px-3 rounded-md cursor-pointer outline-none",
       props.className,
     ])}
     {...props}
@@ -305,7 +308,7 @@ const SwatchTrigger = React.forwardRef<
 >((props, ref) => (
   <ArkColorPicker.SwatchTrigger
     ref={ref}
-    className={clsx(["size-7 border roundmd", props.className])}
+    className={clsx(["size-7 border rounded-md", props.className])}
     {...props}
   />
 ));
@@ -331,7 +334,7 @@ const ValueSwatch = React.forwardRef<
 >((props, ref) => (
   <ArkColorPicker.ValueSwatch
     ref={ref}
-    className={clsx(["size-6 rounded-sm", props.className])}
+    className={clsx(["size-6 rounded-md", props.className])}
     {...props}
   />
 ));

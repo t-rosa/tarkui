@@ -33,7 +33,7 @@ const ClearTrigger = React.forwardRef<
   <ArkCombobox.ClearTrigger
     ref={ref}
     className={clsx([
-      "text-muted-foreground border h-9 rounded-md px-3",
+      "text-muted-foreground border rounded-md px-3 py-1.5",
       "hover:bg-muted",
       "[&>svg]:size-4",
       props.className,
@@ -72,7 +72,7 @@ const Input = React.forwardRef<HTMLInputElement, ArkCombobox.InputProps>(
   (props, ref) => (
     <ArkCombobox.Input
       ref={ref}
-      className={clsx(["h-9 px-3 border rounded-md", props.className])}
+      className={clsx(["px-3 py-1.5 border rounded-md", props.className])}
       {...props}
     />
   )
@@ -123,7 +123,7 @@ const Item = React.forwardRef<HTMLDivElement, ArkCombobox.ItemProps>(
     <ArkCombobox.Item
       ref={ref}
       className={clsx([
-        "h-9 flex justify-between items-center rounded-md p-2",
+        "flex justify-between items-center rounded-md p-2",
         "hover:bg-muted",
         props.className,
       ])}
@@ -175,7 +175,7 @@ const Trigger = React.forwardRef<HTMLButtonElement, ArkCombobox.TriggerProps>(
     <ArkCombobox.Trigger
       ref={ref}
       className={clsx([
-        "text-muted-foreground h-9 px-3 -ml-11",
+        "text-muted-foreground px-3 py-1.5 -ml-11",
         "[&>svg]:size-4",
         props.className,
       ])}

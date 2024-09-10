@@ -32,7 +32,7 @@ const Control = React.forwardRef<HTMLDivElement, ArkCheckbox.ControlProps>(
     <ArkCheckbox.Control
       ref={ref}
       className={clsx([
-        "border size-4 rounded-sm grid place-items-center",
+        "border size-4 rounded grid place-items-center",
         "hover:cursor-pointer",
         "group-data-[focus]:ring-1",
         "group-data-[focus]:ring-ring",

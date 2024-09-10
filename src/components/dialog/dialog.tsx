@@ -53,7 +53,7 @@ const Content = React.forwardRef<HTMLDivElement, ArkDialog.ContentProps>(
     <ArkDialog.Content
       ref={ref}
       className={clsx([
-        "relative p-6 border bg-background max-w-lg w-full rounded-lg",
+        "relative p-6 border bg-background max-w-lg w-full rounded-md",
         "data-[state=open]:animate-in",
         "data-[state=open]:fade-in-0",
         "data-[state=open]:zoom-in-95",
@@ -112,14 +112,7 @@ Title.displayName = "Title";
 
 const Trigger = React.forwardRef<HTMLButtonElement, ArkDialog.TriggerProps>(
   (props, ref) => (
-    <ArkDialog.Trigger
-      ref={ref}
-      className={clsx([
-        "border hover:bg-muted px-3 py-2 rounded-md",
-        props.className,
-      ])}
-      {...props}
-    />
+    <ArkDialog.Trigger ref={ref} className={clsx(props.className)} {...props} />
   )
 );
 

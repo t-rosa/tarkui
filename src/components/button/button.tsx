@@ -3,7 +3,7 @@ import { clsx } from "clsx";
 import * as React from "react";
 
 const buttonVariants = cva(
-  "px-3 py-1.5 inline-flex isolate items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
+  "px-3 py-1.5 inline-flex isolate items-center justify-center whitespace-nowrap rounded-md focus-visible: font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
